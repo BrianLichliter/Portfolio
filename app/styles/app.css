@@ -1,0 +1,12 @@
+#headerBar {
+  padding: 0 2.5%;
+  font-size: 1.25em;
+  position: fixed;
+}
+
+#headerDivider {
+	margin-top: -22px;
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+}

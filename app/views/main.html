@@ -1,0 +1,336 @@
+<div id = "sections">
+	<img src = "https://c1.staticflickr.com/9/8252/8458905523_fc54314a1d_h.jpg" id = "section1backgroundImage">
+	<div class = "section1" id = "section1left"></div>
+	<p class = "fade section1Header" id = "section1leftHeader">Captivated by Tech</p>
+	<div class = "section1" id = "section1right"></div>
+	<p class = "fade section1Header" id = "section1rightHeader">Inspired by Design</p>
+	<div id = "section2">
+		<div id = "section2header">
+			<div class="ui horizontal divider">
+				Work
+			</div>
+		</div>
+		<div id = "section2body">
+			<div class = "ui three doubling folio cards" id = "section2cardWrapper">
+				<div ng-repeat = "project in projects" class="ui card wow fadeIn">
+					<div class="blurring image dimmable">
+						<div class="ui dimmer">
+							<div class="content">
+								<div class="center">
+									<a target = "_blank" href = "{{project.link}}" class="ui inverted button">View on Medium</a>
+								</div>
+							</div>
+						</div>
+						<img class = "ui image" ng-src="{{project.cardImage._url}}">
+					</div>
+					<div class="content">
+						<div class="header">
+							<a target = "_blank" href="{{project.link}}">{{project.title}}</a>
+						</div>
+						<div class="meta">
+							<div class = "group"><span ng-repeat = "tag in project.tags">{{tag}}<span ng-show=" ! $last ">,</span></span></div>
+						</div>
+					</div>
+					<!-- tile configurations go here -->
+					<script ng-if="$last">
+					$( document ).ready(function() {
+						$('.dimmable').dimmer({
+							on: 'hover'
+						});
+					});
+					</script>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id = "section3">
+		<div id = "section3header">
+			<div class="ui horizontal divider">
+				About
+			</div>
+		</div>
+		<div id = "section3body">
+			<div class="ui two column grid">
+				<div class="row stackable">
+					<div class="column">
+						<div class="ui segment wow fadeIn">
+							<h3>Me, Myself, and I</h3>
+							<div class="ui items">
+								<div class="item">
+									<div class="ui tiny image section3image">
+										<img src="images/aboutImage.jpg">
+									</div>
+									<div class="middle aligned content">
+										<span class="header">Brian Lichliter</span>
+										<div class = "description">
+											<a href = "https://www.dropbox.com/s/btixbuv9jhl2mat/Resume.pdf?dl=0" target = "_blank"><button class = "ui blue button">Resume</button></a>
+										</div>
+									</div>
+								</div>							
+							</div>
+						</div>
+						<div class="ui segment wow fadeIn">
+							<h3>Education</h3>
+							<div class="ui items">
+								<div class="item">
+									<div class="ui mini image">
+										<img class = "section3image" src = "images/NU.png">
+									</div>
+									<div class="content">
+										<span class="header">Northwestern University</span>
+										<div class="description">
+											<p>M.S. in Engineering Design Innovation</p>
+										</div>
+										<div class="extra">
+											Sept. 2014 - Dec. 2015
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="ui mini image">
+										<img src = "images/NU.png">
+									</div>
+									<div class="content">
+										<span class="header">Northwestern University</span>
+										<div class="description">
+											<p>B.S. in Computer Engineering</p>
+										</div>
+										<div class="extra">
+											Sept. 2011 - Jun. 2015
+										</div>
+									</div>
+								</div>				  
+							</div>
+						</div>
+						<div class="ui segment wow fadeIn">
+							<h3>Awards</h3>
+							<div class="ui items">
+								<div class="item">
+									<div class="content">
+										<span class="header">Magna Cum Laude (B.S.)</span>
+										<div class="extra">
+											Jun. 2015
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="content">
+										<span class="header">Dean's List (x9)</span>
+										<div class="extra">
+											Sept. 2011 - Sept. 2014
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui segment wow fadeIn">
+							<h3>Groups</h3>
+							<div class="ui items">
+								<div class="item">
+									<div class="ui image mini">
+										<img src = "images/hkn.png">
+									</div>
+									<div class="content">
+										<span class="header">IEEE-Eta Kappa Nu</span>
+										<div class="extra">
+											Sept. 2014 - Jun. 2015
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="ui segment wow fadeIn">
+							<h3>Skills</h3>
+							<div class="ui items">
+								<div class="item">
+									<div class="">
+										<i class="code big icon"></i>
+									</div>
+									<div class="content">
+										<span class="header">Programming</span>
+										<div class="description">
+											<p><b>Languages</b>: C, C++, Python, Perl, HTML, CSS, JS,JQuery, SQL, VHDL, Assembly</p>
+											<p><b>Frameworks</b>: Angular.js, Steroids.js, Appengine, Parse</p>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="">
+										<i class="users big icon"></i>
+									</div>
+									<div class="content">
+										<span class="header">Human-Centered Design</span>
+										<div class="description">
+											<p><b>Software</b>: Adobe CC, Solidworks, Quartus, Matlab</p>
+											<p><b>Strengths</b>: Sketching, Prototyping</p>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="">
+										<i class="search big icon"></i>
+									</div>
+									<div class="content">
+										<span class="header">Design Research</span>
+										<div class="description">
+											<p><b>Strengths</b>: Interviewing, Photography, Synthesis</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui segment wow fadeIn">
+							<h3>Interests</h3>
+							<div class="ui items">
+								<div class="item">
+									<div class="">
+										<i class="browser big icon"></i>
+									</div>
+									<div class="content">
+										<span class="header">UI/UX</span>
+									</div>
+								</div>
+								<div class="item">
+									<div class="">
+										<i class="tablet big icon"></i>
+									</div>
+									<div class="content">
+										<span class="header">Mobile Technology</span>
+									</div>
+								</div>								
+								<div class="item">
+									<div class="">
+										<i class="grid layout big icon"></i>
+									</div>
+									<div class="content">
+										<span class="header">Embedded Systems</span>
+									</div>
+								</div>								
+								<div class="item">
+									<div class="">
+										<i class="write big icon"></i>
+									</div>
+									<div class="content">
+										<span class="header">Productivity</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui segment wow fadeIn">
+							<h3>Hobbies</h3>
+							<div class="ui items">
+								<div class="item">
+									<div class="">
+										<i class="music big icon"></i>
+									</div>
+									<div class="content">
+										<span class="header">Trombone</span>
+										<div class="description">
+											<p>Performed with the Northwestern Philharmonia Orchestra and Northwestern Jazz Band as well as a ska group.</p>
+										</div>
+										<div class="extra">
+											2003 - Present
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<div id = "section4">
+		<div id = "section4header">
+			<div class="ui horizontal divider">
+				Contact
+			</div>
+		</div>
+		<div id = "section4body">
+			<div id = "section4contactRow" class = "ui stackable grid">
+				<div class="four wide column wow fadeIn">
+					<a href = "mailto:brian.lichliter@u.northwestern.edu">
+						<h2 class="ui center aligned icon header">
+							<i class="mail icon"></i>
+							E-Mail
+						</h2>
+					</a>
+				</div>
+				<div class="four wide column wow fadeIn">
+					<a href = "https://github.com/BrianLichliter" target = "_blank">
+						<h2 class="ui center aligned icon header">
+							<i class="github icon"></i>
+							Github
+						</h2>
+					</a>
+				</div>
+				<div class="four wide column wow fadeIn">
+					<a href = "https://medium.com/@BrianLichliter" target = "_blank">
+						<h2 class="ui center aligned icon header">
+							<i class="medium icon"></i>
+							Medium
+						</h2>
+					</a>
+				</div>
+				<div class="four wide column wow fadeIn">
+					<a href = "https://www.flickr.com/photos/93060454@N02/" target = "_blank">
+						<h2 class="ui center aligned icon header">
+							<i class="flickr icon"></i>
+							Flickr
+						</h2>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+$( document ).ready(function() {
+	jQuery(function($) {
+		var divs = $('.fade');
+		var menu = $('#headerBar');
+		var menuBrand = $('.header.item');
+		var menuItems = $('.right.menu > .item');
+		$(window).on('scroll', function() {
+			var st = $(this).scrollTop();
+			var stMenu;
+			if (st > (screen.height - 100)) {
+				stMenu = 1;
+			} else {
+				stMenu = st/(screen.height - 100);
+			}
+			var stMenuBrand = stMenu * 100;
+			if ($(window).width() < 768) {
+				divs.css({ 
+					'opacity' : 1
+				});
+				menu.css({
+					'background-color' : 'hsla(210, 3%, 25%,1)'
+				});
+				menuBrand.css({
+					'color' : 'hsla(0, 0%, 100%, 1)'
+				});
+				menuItems.css({
+					'color' : 'hsla(0, 0%, 100%, 1)'
+				});
+			} else {
+				divs.css({ 
+					'opacity' : 1 - st/200
+				}); 
+				menu.css({
+					'background-color' : 'hsla(210, 3%, 25%,'+stMenu+')'
+				});
+				menuBrand.css({
+					'color' : 'hsla(0, 0%,'+ stMenuBrand +'%, 1)'
+				});
+				menuItems.css({
+					'color' : 'hsla(0, 0%,'+ stMenuBrand +'%, 1)'
+				});
+			}
+		});
+	});
+});
+</script>

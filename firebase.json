@@ -1,0 +1,15 @@
+{
+  "firebase": "brianlichliter",
+  "public": "dist",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ],
+  "rewrites": [
+    {
+      "source": "**/*.html",
+      "destination": "/index.html"
+    }
+  ]
+}
