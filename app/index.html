@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="portfolioApp">
 <head>
 	<meta charset="utf-8">
 	<title></title>
@@ -13,19 +13,18 @@
 	<!-- endbuild -->
 	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css' />
 	<!-- build:css(.tmp) styles/app.css -->
-	<link rel="stylesheet" href="styles/app.css">
+	<link rel="stylesheet" href="styles/app.css" />
 	<!-- endbuild -->
 	<link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
 </head>
-<body ng-app="portfolioApp">
+<body>
 	<div id = "headerContainer">
 		<div id = "headerBar" class="ui text fixed top menu greyBackgroundMobile">
 			<a class="whiteMobile header item" href = "#sections">Brian Lichliter</a>
 			<div class="right menu">
 				<a class="white item" href = "#section2">Work</a>
 				<a class="white item" href = "#section3">About</a>
-<!-- 				<a class="white item" href = "#section4">Process</a> -->
-				<a class="white item" href = "#section5">Contact</a>
+				<a class="white item" href = "#section4">Contact</a>
 			</div>
 		</div>
 	</div>
@@ -57,19 +56,18 @@
 	<script src="bower_components/parse/parse.min.js"></script>
 	<script src="bower_components/parse-angular-patch/dist/parse-angular.js"></script>
 	<script src="bower_components/semantic/dist/semantic.js"></script>
+	<script src="bower_components/angular-route-styles/route-styles.js"></script>
 	<!-- endbower -->
 	<!-- endbuild -->
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js'></script>
 	<!-- build:js({.tmp,app}) scripts/scripts.js -->
 	<script src="scripts/app.js"></script>
 	<script src="scripts/controllers/main.js"></script>
-	<script src="scripts/controllers/about.js"></script>
-	<script src="scripts/controllers/work.js"></script>
 	<!-- endbuild -->
 
 	<script>
-	$('#headerBar > .right.menu > a[href*=#]:not([href=#])').click(function() {
-		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+	$('#headerBar > .right.menu > a[href*="#"]:not([href="#"])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
 			|| location.hostname == this.hostname) {
 			var target = $(this.hash);
 			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -81,8 +79,8 @@
 			}
 		}
 	});
-	$('#headerBar > a[href*=#]:not([href=#])').click(function() {
-		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+	$('#headerBar > a[href*="#"]:not([href="#"])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
 			|| location.hostname == this.hostname) {
 			var target = $(this.hash);
 			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');

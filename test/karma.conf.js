@@ -34,6 +34,7 @@ module.exports = function(config) {
       'bower_components/parse/parse.min.js',
       'bower_components/parse-angular-patch/dist/parse-angular.js',
       'bower_components/semantic/dist/semantic.js',
+      'bower_components/angular-route-styles/route-styles.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

@@ -8,7 +8,7 @@
  * Controller of the portfolioApp
  */
 angular.module('portfolioApp')
-  .controller('MainCtrl',['$scope', '$location', '$anchorScroll', function ($scope, $location, $anchorScroll) {
+  .controller('MainCtrl',['$scope', '$location', '$anchorScroll', function ($scope, $location) {
 
   	var Project = Parse.Object.extend("Project");
 	var projectQuery = new Parse.Query(Project);
@@ -20,15 +20,5 @@ angular.module('portfolioApp')
 			$scope.projects[index] = result.attributes;
 		});
 	});
-
-	$scope.goToSection = function(section) {
-		console.log('we did it!');
-      // set the location.hash to the id of
-      // the element you wish to scroll to.
-      $location.hash(section);
-
-      // call $anchorScroll()
-      $anchorScroll();
-    };
 
   }]);

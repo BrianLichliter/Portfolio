@@ -17,7 +17,7 @@ angular
     'ngSanitize',
     'ngTouch',
     'parse-angular',
-    'door3.css'
+    'routeStyles'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -37,7 +37,7 @@ angular
       {
       boxClass:     'wow',      // default
       animateClass: 'animated', // default
-      offset:       100,          // default
+      offset:       100,        // default
       mobile:       false,      // default
       live:         true        // default
     }).init();
