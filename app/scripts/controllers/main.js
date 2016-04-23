@@ -19,7 +19,10 @@ angular.module('portfolioApp')
 		angular.forEach(results, function(result, index){
 			$scope.projects[index] = result.attributes;
 		});
-	});
+	})
+    .then(function(){
+        $("body").fadeToggle();
+    });
 
     $( document ).ready(function() {
     	jQuery(function($) {

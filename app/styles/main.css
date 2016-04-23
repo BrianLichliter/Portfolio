@@ -40,6 +40,7 @@
   }
   #section1rightHeader {
     top: 150%;
+    z-index: 2;
   }
   #section1backgroundImage {
     position: absolute;
@@ -50,6 +51,7 @@
   }
   #section1right {
     background-color: white;
+    z-index: 1;
   }
   #section1leftHeader {
     color: white;
@@ -127,6 +129,16 @@
   right: 0px;
 }
 
+#section1downArrow {
+  margin: 0;
+  bottom: -.7em;
+  left: 50%;
+  position: fixed;
+  margin-left: -0.58em;
+  font-size: 5em;
+  color: #4183c4;
+}
+
 /*--------------------------*/
 @media only screen and (min-width: 769px) {
   #section2 {
@@ -160,6 +172,31 @@
 }
 
 /*--------------------------*/
+#section3 {
+  position: relative;
+  background-color: white;
+  min-height: 100%;
+  padding-bottom: 5%;
+}
+
+#section3 > #section3header {
+  padding-top: 1%;
+}
+
+#section3body {
+  padding: 2.5%;
+  margin: 0 auto;
+  max-width: 1112px;
+}
+
+#section3header > .divider {
+  font-weight: 400;
+  font-size: 3.5rem;
+  color: rgb(62,64,66);
+}
+#section3body .ui.items > .item > .content {
+  margin-top: 4px;
+}
 @media only screen and (min-width: 769px) {
   #section3description {
     font-size: 2rem;
@@ -168,6 +205,9 @@
 @media only screen and (max-width: 768px) {
   #section3description {
     font-size: 1.5rem;
+  }
+  #section3body {
+    max-width: 360px;
   }
   .largeImage {
     height: 150px !important;
@@ -182,29 +222,6 @@
     margin-bottom: 10px !important;
   }
 }
-#section3 {
-  position: relative;
-  background-color: white;
-  min-height: 100%;
-  padding-bottom: 5%;
-}
-
-#section3 > #section3header {
-  padding-top: 1%;
-}
-
-#section3body {
-  padding-top: 2.5%;
-  margin: 0 auto;
-  max-width: 1112px;
-}
-
-#section3header > .divider {
-  /*font-family: 'Comfortaa', cursive;*/
-  font-weight: 400;
-  font-size: 3.5rem;
-  color: rgb(62,64,66);
-}
 
 /*--------------------------*/
 @media only screen and (min-width: 769px) {
@@ -212,8 +229,7 @@
 #section4 {
   margin-top: -20px;
   position: relative;
-  background-color: rgb(91,117,142);
-  min-height: 100%;
+  background-color: #4183c4;
 }
 
 #section4 > #section4header {
@@ -231,7 +247,6 @@
 }
 
 #section4header > .divider {
-  /*font-family: 'Comfortaa', cursive;*/
   font-weight: 400;
   font-size: 3.5rem;
   color: white;
