@@ -1,9 +1,0 @@
-{
-  "name": "brianlichliter",
-  "root": "dist",
-  "clean_urls": "true",
-  "routes": {
-            "**/*.html": "index.html"
-          },
-  "cache_control": {}
-}
