@@ -75,7 +75,7 @@ module.exports = function (grunt) {
           command: 'firebase serve'
       },
       open: {
-          command: 'firebase open'
+          command: 'firebase open hosting:site'
       }
     },
 
