@@ -94,6 +94,7 @@
     object-fit: cover;
     z-index: -98;
     opacity: .1;
+    left: 0;
   }
   #section1left {
     background-color: white;
