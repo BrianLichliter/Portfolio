@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "production": "firebase-brianlichliter",
+    "dist": "firebase-brianlichliter"
+  }
+}

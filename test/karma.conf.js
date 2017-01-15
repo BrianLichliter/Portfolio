@@ -31,10 +31,10 @@ module.exports = function(config) {
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-sanitize/angular-sanitize.js',
       'bower_components/angular-touch/angular-touch.js',
-      'bower_components/parse/parse.min.js',
-      'bower_components/parse-angular-patch/dist/parse-angular.js',
       'bower_components/semantic/dist/semantic.js',
       'bower_components/angular-route-styles/route-styles.js',
+      'bower_components/firebase/firebase.js',
+      'bower_components/angularfire/dist/angularfire.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

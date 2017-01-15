@@ -16,8 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'parse-angular',
-    'routeStyles'
+    'routeStyles',
+    'firebase'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -32,7 +32,15 @@ angular
       });
   })
   .run(function() {
-    Parse.initialize("nEhMEIVMRAFaBP0Do8Vw6OMnBqEg0I8vY9fJ6axC", "oxxdfINTpl2bpX2oRndRGMM6byuJ1DInhSOhSlXN"); 
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDYZq0OeUhXFmm7bVLtmOZ-1bpC4yeH-0A",
+      authDomain: "brianlichliter.firebaseapp.com",
+      databaseURL: "https://brianlichliter.firebaseio.com",
+      storageBucket: "firebase-brianlichliter.appspot.com",
+      messagingSenderId: "728694720383"
+    };
+    firebase.initializeApp(config);
     var wow = new WOW(
       {
       boxClass:     'wow',      // default

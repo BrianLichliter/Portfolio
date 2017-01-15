@@ -8,21 +8,33 @@
  * Controller of the portfolioApp
  */
 angular.module('portfolioApp')
-  .controller('MainCtrl',['$scope', '$location', '$anchorScroll', function ($scope, $location) {
+  .controller('MainCtrl',['$scope', '$location', '$anchorScroll', '$firebaseObject',function ($scope, $location, $anchorScroll, $firebaseObject) {
 
-  	var Project = Parse.Object.extend("Project");
-	var projectQuery = new Parse.Query(Project);
-	$scope.projects = [];
-
-	projectQuery.find()
-	.then(function(results){
-		angular.forEach(results, function(result, index){
-			$scope.projects[index] = result.attributes;
-		});
-	})
-    .then(function(){
+    var ref = firebase.database().ref();
+    $scope.data = $firebaseObject(ref);
+    $scope.data.$loaded()
+    .then(function() {
+        console.log($scope.data.results);  
+        $scope.projects = $scope.data.results;
         $("body").fadeToggle();
+    })
+    .catch(function(err) {
+        console.error(err);
     });
+
+ //  	var Project = Parse.Object.extend("Project");
+	// var projectQuery = new Parse.Query(Project);
+	// $scope.projects = [];
+
+	// projectQuery.find()
+	// .then(function(results){
+	// 	angular.forEach(results, function(result, index){
+	// 		$scope.projects[index] = result.attributes;
+	// 	});
+	// })
+ //    .then(function(){
+ //        $("body").fadeToggle();
+ //    });
 
     $( document ).ready(function() {
     	jQuery(function($) {
