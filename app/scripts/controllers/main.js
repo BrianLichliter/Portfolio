@@ -13,8 +13,7 @@ angular.module('portfolioApp')
     var ref = firebase.database().ref();
     $scope.data = $firebaseObject(ref);
     $scope.data.$loaded()
-    .then(function() {
-        console.log($scope.data.results);  
+    .then(function() { 
         $scope.projects = $scope.data.results;
         $("body").fadeToggle();
     })
